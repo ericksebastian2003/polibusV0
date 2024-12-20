@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "289730392059",
+    "firebase_url": "https://react-603e6-default-rtdb.firebaseio.com",
+    "project_id": "react-603e6",
+    "storage_bucket": "react-603e6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289730392059:android:20feb2b4160fe501df655e",
+        "android_client_info": {
+          "package_name": "com.ericksebas03.ap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDl0-0RHfSE6-b_gIsb79RMTM2O1jHwjZo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289730392059:android:04a314618f07e7fcdf655e",
+        "android_client_info": {
+          "package_name": "com.ericksebas03.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDl0-0RHfSE6-b_gIsb79RMTM2O1jHwjZo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
