@@ -165,6 +165,10 @@ void _showErrorDialog(String message){
                 ),
                 const SizedBox(height: 16),
                 DropdownButtonFormField(
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.bus_alert_sharp)
+                  ),
                   value: _rutaSelect,
                   hint: const Text("Seleccione su ruta"),
                   items: [
