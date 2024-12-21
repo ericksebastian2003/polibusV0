@@ -12,6 +12,7 @@ class _RegisterScreenState extends State<RegisterScreen>{
   //Para manejar los cammpos del formulario
   final _formKey = GlobalKey<FormState>();
   String? _rutaSelect;
+  final TextEditingController _codigoUnicoController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _confirmPasswordController = TextEditingController();
@@ -130,6 +131,18 @@ void _showErrorDialog(String message){
                     return null;
                   },
                   keyboardType: TextInputType.emailAddress,
+                ),
+                const SizedBox(height: 16),
+                TextFormField(
+                  controller: _codigoUnicoController,
+                  decoration : const InputDecoration(
+                      border: OutlineInputBorder(),
+                      prefixIcon: Icon(Icons.numbers_rounded),
+                      labelText: "Código unico"
+                  ),
+                  keyboardType: TextInputType.number,
+
+
                 ),
                 const SizedBox(height: 16),
                 TextFormField(
