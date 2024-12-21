@@ -32,6 +32,8 @@ dependencies:
     sdk: flutter
   # Autenticación
   firebase_auth: 5.3.4
+  #Generar codigos QR
+  qr_flutter: ^4.0.0
 
   # Firebase backend
   cloud_firestore: ^5.5.1
@@ -83,7 +85,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
+  assets:
+   - assets/avatar.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

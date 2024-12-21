@@ -35,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen>{
           _passwordController.text.trim(),
         );
         //Redirigir a Home
-        Navigator.pushReplacementNamed(context, '/home');
+        Navigator.pushReplacementNamed(context, '/profile');
     }
     catch(e){
       _showErrorDialog("Error al iniciar sesión ${e.toString()}");
@@ -94,7 +94,7 @@ class _LoginScreenState extends State<LoginScreen>{
                   obscureText: true,
                   decoration: const InputDecoration(
                     
-                    labelText: "COntraseña",
+                    labelText: "Contraseña",
                     prefixIcon: Icon(Icons.lock),
                     border: OutlineInputBorder(),
                   ),
@@ -119,7 +119,7 @@ class _LoginScreenState extends State<LoginScreen>{
                     builder: (context) =>  RegisterScreen()),
                   );
                 },
-                  child: const Text("Si no tienes cuenta , registrate"),
+                  child: const Text("¿No tienes cuenta? , registrate"),
               ),
               ],
             ),

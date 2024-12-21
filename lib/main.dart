@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:polibus/screens/profile_screen.dart';
 
 import 'services/auth_service.dart';
 import 'screens/login_screen.dart';
 import 'screens/register_screen.dart';
 import 'screens/home_screen.dart';
-
+import 'screens/profile_screen.dart';
 import 'firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -24,13 +25,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Poli Bus',  // Título de la aplicación
-      theme: ThemeData.dark(),  // Establece el tema de la aplicación (oscuro)
+      theme: ThemeData.dark(),// Establece el tema de la aplicación (oscuro)
       initialRoute: '/',  // Establece la ruta inicial
       routes: {
         '/': (context) => AuthStreamBuilder(),  // AuthStreamBuilder manejará la lógica de login y home
         '/login': (context) => LoginScreen(),  // Ruta para la pantalla de login
         '/register': (context) => RegisterScreen(),  // Ruta para la pantalla de registro
-        '/home': (context) => HomeScreen(),  // Ruta para la pantalla principal (Home)
+        // '/home': (context) => HomeScreen(),  // Ruta para la pantalla principal (Home)
+        '/profile' : (context) => ProfileScreen(), //Ruta para acceder al perfil del usuario
       },
     );
   }
