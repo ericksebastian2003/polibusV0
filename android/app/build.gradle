@@ -9,7 +9,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.polibus"
+    namespace = "com.ericksebas03.app"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -40,8 +40,19 @@ android {
             signingConfig = signingConfigs.debug
         }
     }
+    buildscript {
+        repositories {
+            google()  // Asegúrate de tener esta línea
+            mavenCentral()
+        }
+        dependencies {
+            classpath 'com.google.gms:google-services:4.3.15' // Versión recomendada
+        }
+    }
+
 }
 
 flutter {
     source = "../.."
 }
+apply plugin: 'com.google.gms.google-services'

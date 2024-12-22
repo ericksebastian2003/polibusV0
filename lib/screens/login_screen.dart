@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../services/auth_service.dart';
-import './register_screen.dart';
+import 'register_screen.dart';
 
 class LoginScreen  extends StatefulWidget{
  const LoginScreen({Key? key}) : super(key : key);
@@ -35,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen>{
           _passwordController.text.trim(),
         );
         //Redirigir a Home
-        Navigator.pushReplacementNamed(context, '/profile');
+        Navigator.pushReplacementNamed(context, '/home');
     }
     catch(e){
       _showErrorDialog("Error al iniciar sesión ${e.toString()}");
@@ -112,14 +112,15 @@ class _LoginScreenState extends State<LoginScreen>{
                   ),
               
               const SizedBox(height: 20),
-              TextButton(
+              const Text('¿No tienes cuenta?'),
+              ElevatedButton(
                 onPressed: (){
                   //Ir al screen Registro
                   Navigator.push(context,MaterialPageRoute(
                     builder: (context) =>  RegisterScreen()),
                   );
                 },
-                  child: const Text("¿No tienes cuenta? , registrate"),
+                  child: const Text("Registrate"),
               ),
               ],
             ),

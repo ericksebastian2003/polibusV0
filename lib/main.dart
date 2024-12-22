@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:polibus/screens/profile_screen.dart';
-
-import 'services/auth_service.dart';
+import 'screens/main_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/register_screen.dart';
-import 'screens/home_screen.dart';
-import 'screens/profile_screen.dart';
 import 'firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  try {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  } catch (e) {
+    debugPrint("Error initializing Firebase: $e");
+  }
   runApp(const MyApp());
 }
+
 // Clase principal
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -24,15 +25,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Poli Bus',  // Título de la aplicación
-      theme: ThemeData.dark(),// Establece el tema de la aplicación (oscuro)
-      initialRoute: '/',  // Establece la ruta inicial
+      title: 'Poli Bus', // Título de la aplicación
+      theme: ThemeData.dark(), // Tema oscuro
+      initialRoute: '/', // Ruta inicial
       routes: {
-        '/': (context) => AuthStreamBuilder(),  // AuthStreamBuilder manejará la lógica de login y home
-        '/login': (context) => LoginScreen(),  // Ruta para la pantalla de login
-        '/register': (context) => RegisterScreen(),  // Ruta para la pantalla de registro
-        // '/home': (context) => HomeScreen(),  // Ruta para la pantalla principal (Home)
-        '/profile' : (context) => ProfileScreen(), //Ruta para acceder al perfil del usuario
+        '/': (context) => const AuthStreamBuilder(), // Manejo de autenticación
+        '/register': (context) => const RegisterScreen(), // Pantalla de registro
+        '/home': (context) => const MainScreen(), // Pantalla principal
       },
     );
   }
@@ -40,29 +39,31 @@ class MyApp extends StatelessWidget {
 
 // Clase AuthStreamBuilder para gestionar el estado de autenticación
 class AuthStreamBuilder extends StatelessWidget {
+  const AuthStreamBuilder({super.key});
+
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<User?>(
-      stream: FirebaseAuth.instance.authStateChanges(),  // Observa los cambios en el estado de autenticación
+      stream: FirebaseAuth.instance.authStateChanges(), // Cambios en autenticación
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(  // Muestra un indicador de carga mientras espera la respuesta
+          return const Center(
             child: CircularProgressIndicator(),
           );
         }
 
         if (snapshot.hasError) {
-          return const Center(  // Muestra un mensaje de error si ocurre un problema
-            child: Text('Algo salió mal'),
+          return const Center(
+            child: Text('Error al cargar la aplicación'),
           );
         }
 
         if (snapshot.hasData) {
-          // Si el usuario está autenticado, redirigimos a la pantalla principal (Home)
-          return  HomeScreen();
+          // Usuario autenticado, redirigir a la pantalla principal
+          return const MainScreen();
         } else {
-          // Si no hay usuario autenticado, redirigimos a la pantalla de login
-          return  LoginScreen();
+          // No autenticado, redirigir al login
+          return const LoginScreen();
         }
       },
     );

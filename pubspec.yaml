@@ -34,7 +34,8 @@ dependencies:
   firebase_auth: 5.3.4
   #Generar codigos QR
   qr_flutter: ^4.0.0
-
+  #Consumo de Apis
+  http : ^1.0.0
   # Firebase backend
   cloud_firestore: ^5.5.1
   firebase_core: ^3.8.1
