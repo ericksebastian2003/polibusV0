@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class RutasScreen extends StatelessWidget {
-  const RutasScreen({Key? key}) : super(key: key);
+class RutasView extends StatelessWidget {
+  const RutasView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

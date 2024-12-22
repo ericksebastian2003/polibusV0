@@ -33,7 +33,7 @@ dependencies:
   # Autenticación
   firebase_auth: 5.3.4
   #Generar codigos QR
-  qr_flutter: ^4.0.0
+  barcode_widget: ^2.0.3 
   #Consumo de Apis
   http : ^1.0.0
   # Firebase backend
