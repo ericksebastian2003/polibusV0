@@ -13,7 +13,8 @@ class _ProfileViewState extends State<ProfileView>{
     return Scaffold(
       appBar: AppBar(
         title: const Text("Mi perfil"),
-        backgroundColor: Colors.yellow,
+        backgroundColor: const Color.fromARGB(255, 41, 9, 129),
+        foregroundColor: Colors.white,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
