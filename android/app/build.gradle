@@ -1,15 +1,12 @@
 plugins {
     id "com.android.application"
-    // START: FlutterFire Configuration
-    id 'com.google.gms.google-services'
-    // END: FlutterFire Configuration
     id "kotlin-android"
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id "dev.flutter.flutter-gradle-plugin"
 }
 
 android {
-    namespace = "com.ericksebas03.app"
+    namespace = "com.example.polibus"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -40,19 +37,9 @@ android {
             signingConfig = signingConfigs.debug
         }
     }
-    buildscript {
-        repositories {
-            google()  // Asegúrate de tener esta línea
-            mavenCentral()
-        }
-        dependencies {
-            classpath 'com.google.gms:google-services:4.3.15' // Versión recomendada
-        }
-    }
-
 }
 
 flutter {
     source = "../.."
 }
-apply plugin: 'com.google.gms.google-services'
+

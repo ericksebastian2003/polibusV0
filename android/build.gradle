@@ -1,18 +1,10 @@
-allprojects {
+buildscript {
     repositories {
         google()
         mavenCentral()
     }
-}
-
-rootProject.buildDir = "../build"
-subprojects {
-    project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-subprojects {
-    project.evaluationDependsOn(":app")
-}
-
-tasks.register("clean", Delete) {
-    delete rootProject.buildDir
+    dependencies {
+        // Asegúrate de tener AGP 8.2.1 o superior
+        classpath 'com.android.tools.build:gradle:8.2.1'  // Asegúrate de usar una versión compatible
+    }
 }

@@ -44,42 +44,39 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAfQt-gL6dvrPeTA2bqqk7f_LWUKC_8xpA',
-    appId: '1:289730392059:web:d5ea4c2960a77deadf655e',
-    messagingSenderId: '289730392059',
-    projectId: 'react-603e6',
-    authDomain: 'react-603e6.firebaseapp.com',
-    databaseURL: 'https://react-603e6-default-rtdb.firebaseio.com',
-    storageBucket: 'react-603e6.firebasestorage.app',
-    measurementId: 'G-VGLDQWYJYL',
+    apiKey: 'AIzaSyAoVxu3nyfFk0X1F1VNyeY6yhGijHVXVcU',
+    appId: '1:889273735292:web:04d3f56c47334e593d91f9',
+    messagingSenderId: '889273735292',
+    projectId: 'polibus-1b2d9',
+    authDomain: 'polibus-1b2d9.firebaseapp.com',
+    storageBucket: 'polibus-1b2d9.firebasestorage.app',
+    measurementId: 'G-Z11XRVF8GG',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDl0-0RHfSE6-b_gIsb79RMTM2O1jHwjZo',
-    appId: '1:289730392059:android:04a314618f07e7fcdf655e',
-    messagingSenderId: '289730392059',
-    projectId: 'react-603e6',
-    databaseURL: 'https://react-603e6-default-rtdb.firebaseio.com',
-    storageBucket: 'react-603e6.firebasestorage.app',
+    apiKey: 'AIzaSyApF5WWUF69IlwcAGHcKwB2X6Xo_AhYL9s',
+    appId: '1:889273735292:android:bbe2762c5fd7384a3d91f9',
+    messagingSenderId: '889273735292',
+    projectId: 'polibus-1b2d9',
+    storageBucket: 'polibus-1b2d9.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyB_1JnOYfIF1KO6yN-VC0jPBOl0vrbarow',
-    appId: '1:289730392059:ios:3ccab8e74d45ef3edf655e',
-    messagingSenderId: '289730392059',
-    projectId: 'react-603e6',
-    databaseURL: 'https://react-603e6-default-rtdb.firebaseio.com',
-    storageBucket: 'react-603e6.firebasestorage.app',
+    apiKey: 'AIzaSyCIDC6nN09cmIDX8j0ypNm3Nkew56_bnRY',
+    appId: '1:889273735292:ios:641e58169d7f57d03d91f9',
+    messagingSenderId: '889273735292',
+    projectId: 'polibus-1b2d9',
+    storageBucket: 'polibus-1b2d9.firebasestorage.app',
     iosBundleId: 'com.example.polibus',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyB_1JnOYfIF1KO6yN-VC0jPBOl0vrbarow',
-    appId: '1:289730392059:ios:3ccab8e74d45ef3edf655e',
-    messagingSenderId: '289730392059',
-    projectId: 'react-603e6',
-    databaseURL: 'https://react-603e6-default-rtdb.firebaseio.com',
-    storageBucket: 'react-603e6.firebasestorage.app',
+    apiKey: 'AIzaSyCIDC6nN09cmIDX8j0ypNm3Nkew56_bnRY',
+    appId: '1:889273735292:ios:641e58169d7f57d03d91f9',
+    messagingSenderId: '889273735292',
+    projectId: 'polibus-1b2d9',
+    storageBucket: 'polibus-1b2d9.firebasestorage.app',
     iosBundleId: 'com.example.polibus',
   );
+
 }
