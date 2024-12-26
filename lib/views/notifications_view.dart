@@ -23,10 +23,15 @@ class _NotificationsViewState extends State<NotificationsView>{
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //Todos los elementos
-
             Card(
-              elevation: 0,
-              child: const Text("Hola"),
+              color: Colors.amber,
+              elevation: 5,
+              child: const ListTile(
+                title: Text("Notificacion 1"),
+                subtitle: Text("Notification"),
+                trailing: Icon(Icons.notifications),
+              )
+              
             )
 
           ],
